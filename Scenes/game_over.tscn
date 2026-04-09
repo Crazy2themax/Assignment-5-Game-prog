@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://ck1hashnf63c0"]
+[gd_scene format=3 uid="uid://c7ohijy7bux8j"]
 
-[ext_resource type="Script" uid="uid://djajjf0vui351" path="res://game_over.gd" id="1_eoghk"]
+[ext_resource type="Script" path="res://game_over.gd" id="1_eoghk"]
 [ext_resource type="Texture2D" uid="uid://c2e8rg04pnrhi" path="res://Assets/Free-Mountain-Backgrounds-Pixel-Art9.png" id="2_14u15"]
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="3_j3ryr"]
 [ext_resource type="FontFile" uid="uid://gytgk1mjopxc" path="res://Fonts/rubber-biscuit.bold.ttf" id="4_rjluv"]
@@ -44,15 +44,15 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 6
 theme_override_constants/shadow_offset_y = 7
 theme_override_constants/outline_size = 4
-text = "Game Over"
+text = "GAME OVER"
 
 [node name="PlayAgainButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1956474216]
 layout_mode = 2
-text = "Play Again"
+text = "PLAY AGAIN"
 
 [node name="MainMenuButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1681816593]
 layout_mode = 2
-text = "Main Menu"
+text = "MAIN MENU"
 
 [node name="CurrentScoreLabel" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=105289657]
 layout_mode = 2
@@ -60,7 +60,7 @@ theme = SubResource("Theme_vcwsy")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-text = "Your Current Score: 0m"
+text = "YOUR CURRENT SCORE: 0M"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -70,7 +70,7 @@ theme = SubResource("Theme_vcwsy")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-text = "Your HighScore: 0m"
+text = "YOUR HIGHSCORE: 0M"
 horizontal_alignment = 1
 vertical_alignment = 1
 
