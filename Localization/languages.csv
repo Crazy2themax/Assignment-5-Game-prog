@@ -3,20 +3,24 @@ ENGLISH,English,Anglais
 FRENCH,French,Français
 LANGUAGE,Language,Langue
 PLAY,Play,Jouer
+PLAY AGAIN,Play Again,Jouer Encore
 MAIN MENU,Main Menu,Menu Principal
 SETTINGS,Settings,Paramètres
 OPTIONS,Options,Options
 EXIT,Exit,Quitter
+EXIT GAME,Exit Game,Quitter le Jeu
 AGAIN,Again,Encore
 BOULDER DASH, Boulder Dash, Course de Roche
 START,Start,Démarrer
+START GAME,Start Game,Démarrer le Jeu
 GAME OVER,Game Over,Jeu Terminé
 GAME,Game,Jeu
 SOUND,Sound,Son
-YOUR HIGHSCORE,Your Highscore,Votre Meilleur Score
+YOUR HIGHSCORE:,Your Highscore:,Votre Meilleur Score:
 HIGHSCORE,Highscore,Meilleur Score
-YOUR CURRENT SCORE,Your Current Score,Votre Score Actuel
-CURRENT SCORE,Current Score,Score Actuel
+YOUR CURRENT SCORE:,Your Current Score:,Votre Score Actuel:
+CURRENT SCORE:,Current Score:,Score Actuel:
 LEVEL,Level,Niveau
 M,m,m
 METER,Meter,Mètre
+AVOID THE FALLING ROCKS & SURVIVE THE LONGEST,Avoid the Falling Rocks & Survive the Longest,Évitez les Roches Tombantes & Survivez le Plus Longtemps
