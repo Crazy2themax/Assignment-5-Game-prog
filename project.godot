@@ -19,6 +19,10 @@ run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://Localization/languages.en.translation", "res://Localization/languages.fr.translation")
+
 [layer_names]
 
 2d_physics/layer_1="Character"
