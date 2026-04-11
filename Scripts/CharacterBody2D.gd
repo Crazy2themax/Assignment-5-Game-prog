@@ -8,6 +8,8 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_facing_right = true
+var is_dead = false
+
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -48,3 +50,16 @@ func flip():
 		scale.x *= -1
 		is_facing_right = true	
 	
+
+func death():
+	if is_dead:
+		return
+	is_dead = true 
+	print("player died")
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		body.death()
+		print("Game Over")
