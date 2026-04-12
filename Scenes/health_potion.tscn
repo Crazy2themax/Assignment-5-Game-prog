@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://butbjbm62ed1a"]
 
 [ext_resource type="Texture2D" uid="uid://cvmc3vhc7k4xw" path="res://Assets/Glowing Potion - RED - Spritesheet.png" id="1_qwjxh"]
+[ext_resource type="Script" uid="uid://yqgjstyof8ep" path="res://Scenes/health_potion.gd" id="1_x2qfu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ruv2s"]
 radius = 4.0
@@ -99,6 +100,7 @@ animations = [{
 }]
 
 [node name="Area2D" type="Area2D" unique_id=1362229565]
+script = ExtResource("1_x2qfu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=412018476]
 shape = SubResource("CapsuleShape2D_ruv2s")
@@ -109,3 +111,5 @@ scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_eah2x")
 autoplay = "default"
 frame_progress = 0.5758742
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
