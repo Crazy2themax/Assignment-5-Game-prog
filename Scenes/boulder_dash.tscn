@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b6idknklacj8v"]
+[gd_scene format=3 uid="uid://b6idknklacj8v"]
 
 [ext_resource type="Texture2D" uid="uid://beljn1w1haf1q" path="res://Assets/Tile_02.png" id="1_chi5k"]
 [ext_resource type="Texture2D" uid="uid://c2e8rg04pnrhi" path="res://Assets/Free-Mountain-Backgrounds-Pixel-Art9.png" id="2_fa256"]
@@ -9,49 +9,50 @@
 [ext_resource type="Texture2D" uid="uid://k7n7td2fclyg" path="res://Assets/Tile_14.png" id="5_qtvwi"]
 [ext_resource type="Script" uid="uid://dcebonp0wroph" path="res://Scenes/FloorSpawner.gd" id="7_qkw54"]
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="10_j6osf"]
+[ext_resource type="PackedScene" uid="uid://cn6afoq6bq6si" path="res://highscore.tscn" id="10_kabln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6a4y"]
 size = Vector2(32, 1996)
 
-[node name="BoulderDash" type="Node2D"]
+[node name="BoulderDash" type="Node2D" unique_id=803824607]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=181192694]
 position = Vector2(0, -1)
 zoom = Vector2(1.24, 1.24)
 script = ExtResource("4_n5s3k")
 speed = 15
 
-[node name="Background" type="Sprite2D" parent="Camera2D"]
+[node name="Background" type="Sprite2D" parent="Camera2D" unique_id=1193992091]
 position = Vector2(0, 1)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_fa256")
 
-[node name="SpawnerYPosition" type="Node2D" parent="Camera2D"]
+[node name="SpawnerYPosition" type="Node2D" parent="Camera2D" unique_id=531116523]
 position = Vector2(0, -324)
 
-[node name="FloorSpawner" type="Node2D" parent="Camera2D"]
+[node name="FloorSpawner" type="Node2D" parent="Camera2D" unique_id=36453455]
 position = Vector2(0, 291)
 script = ExtResource("7_qkw54")
 
-[node name="FloorLimitLeft" type="Node2D" parent="Camera2D/FloorSpawner"]
+[node name="FloorLimitLeft" type="Node2D" parent="Camera2D/FloorSpawner" unique_id=1880667858]
 position = Vector2(-384, -4)
 
-[node name="FloorLimitRight" type="Node2D" parent="Camera2D/FloorSpawner"]
+[node name="FloorLimitRight" type="Node2D" parent="Camera2D/FloorSpawner" unique_id=918327998]
 position = Vector2(400, -4)
 
-[node name="FloorSpawnerYPosition" type="Node2D" parent="Camera2D"]
+[node name="FloorSpawnerYPosition" type="Node2D" parent="Camera2D" unique_id=1167449091]
 position = Vector2(-1, 321)
 
-[node name="Walls" type="Node2D" parent="."]
+[node name="Walls" type="Node2D" parent="." unique_id=143775747]
 position = Vector2(-572, -305)
 
-[node name="WallLeft" type="StaticBody2D" parent="Walls"]
+[node name="WallLeft" type="StaticBody2D" parent="Walls" unique_id=1071681723]
 position = Vector2(154.545, 968)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallLeft"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallLeft" unique_id=63710685]
 shape = SubResource("RectangleShape2D_p6a4y")
 
-[node name="Sprite2D" type="Sprite2D" parent="Walls/WallLeft"]
+[node name="Sprite2D" type="Sprite2D" parent="Walls/WallLeft" unique_id=933615712]
 texture_filter = 1
 texture_repeat = 2
 position = Vector2(0, -1)
@@ -60,13 +61,13 @@ texture = ExtResource("1_chi5k")
 region_enabled = true
 region_rect = Rect2(0, 0, 2000, 32)
 
-[node name="WallLeftGround" type="StaticBody2D" parent="Walls"]
+[node name="WallLeftGround" type="StaticBody2D" parent="Walls" unique_id=1934631897]
 position = Vector2(123, 968)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallLeftGround"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallLeftGround" unique_id=527645407]
 shape = SubResource("RectangleShape2D_p6a4y")
 
-[node name="Sprite2D" type="Sprite2D" parent="Walls/WallLeftGround"]
+[node name="Sprite2D" type="Sprite2D" parent="Walls/WallLeftGround" unique_id=2086903749]
 texture_filter = 1
 texture_repeat = 2
 position = Vector2(0, -1)
@@ -75,14 +76,14 @@ texture = ExtResource("5_qtvwi")
 region_enabled = true
 region_rect = Rect2(0, 0, 2000, 32)
 
-[node name="WallRight" type="StaticBody2D" parent="Walls"]
+[node name="WallRight" type="StaticBody2D" parent="Walls" unique_id=260020277]
 position = Vector2(987.305, 968)
 scale = Vector2(-1, -1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRight"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRight" unique_id=1691992902]
 shape = SubResource("RectangleShape2D_p6a4y")
 
-[node name="Sprite2D" type="Sprite2D" parent="Walls/WallRight"]
+[node name="Sprite2D" type="Sprite2D" parent="Walls/WallRight" unique_id=316484081]
 texture_filter = 1
 texture_repeat = 2
 position = Vector2(0, -1)
@@ -91,14 +92,14 @@ texture = ExtResource("1_chi5k")
 region_enabled = true
 region_rect = Rect2(0, 0, 2000, 32)
 
-[node name="WallRightGround" type="StaticBody2D" parent="Walls"]
+[node name="WallRightGround" type="StaticBody2D" parent="Walls" unique_id=2081636748]
 position = Vector2(1019, 968)
 rotation = 3.14159
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRightGround"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRightGround" unique_id=255527933]
 shape = SubResource("RectangleShape2D_p6a4y")
 
-[node name="Sprite2D" type="Sprite2D" parent="Walls/WallRightGround"]
+[node name="Sprite2D" type="Sprite2D" parent="Walls/WallRightGround" unique_id=803342851]
 texture_filter = 1
 texture_repeat = 2
 position = Vector2(0, -1)
@@ -107,25 +108,25 @@ texture = ExtResource("5_qtvwi")
 region_enabled = true
 region_rect = Rect2(0, 0, 2000, 32)
 
-[node name="MainCharacter" parent="." instance=ExtResource("3_x35cg")]
+[node name="MainCharacter" parent="." unique_id=457962860 instance=ExtResource("3_x35cg")]
 position = Vector2(3, 14)
 
-[node name="RockSpawner" type="Node2D" parent="."]
+[node name="RockSpawner" type="Node2D" parent="." unique_id=1552215011]
 position = Vector2(0, -326)
 script = ExtResource("4_6li3k")
 
-[node name="Sprite2D" type="Sprite2D" parent="RockSpawner"]
+[node name="Sprite2D" type="Sprite2D" parent="RockSpawner" unique_id=946717080]
 texture = ExtResource("4_iqrwy")
 
-[node name="Timer" type="Timer" parent="RockSpawner"]
+[node name="Timer" type="Timer" parent="RockSpawner" unique_id=1373705499]
 wait_time = 0.8
 autostart = true
 
-[node name="FallingRocks" type="Node2D" parent="."]
+[node name="FallingRocks" type="Node2D" parent="." unique_id=298674754]
 
-[node name="HardTiles" type="Node2D" parent="."]
+[node name="HardTiles" type="Node2D" parent="." unique_id=1958815150]
 
-[node name="InstructionsLabel" type="Label" parent="."]
+[node name="InstructionsLabel" type="Label" parent="." unique_id=1675248910]
 offset_left = -364.0
 offset_top = -197.0
 offset_right = 1846.0
@@ -135,5 +136,9 @@ theme_override_colors/font_color = Color(0.811765, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 23
 text = "Avoid the falling rocks & survive the longest"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1523474370]
+
+[node name="Control" parent="CanvasLayer" unique_id=826709402 instance=ExtResource("10_kabln")]
 
 [connection signal="timeout" from="RockSpawner/Timer" to="RockSpawner" method="_on_timer_timeout"]
