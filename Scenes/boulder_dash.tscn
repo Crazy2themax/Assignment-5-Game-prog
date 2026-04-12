@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://k7n7td2fclyg" path="res://Assets/Tile_14.png" id="5_qtvwi"]
 [ext_resource type="Script" uid="uid://dcebonp0wroph" path="res://Scenes/FloorSpawner.gd" id="7_qkw54"]
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="10_j6osf"]
-[ext_resource type="PackedScene" uid="uid://cn6afoq6bq6si" path="res://highscore.tscn" id="10_kabln"]
+[ext_resource type="PackedScene" uid="uid://b4o5v7ay0dsh8" path="res://highscore.tscn" id="10_kabln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6a4y"]
 size = Vector2(32, 1996)
@@ -138,7 +138,14 @@ theme_override_font_sizes/font_size = 23
 text = "Avoid the falling rocks & survive the longest"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1523474370]
+visible = false
 
 [node name="Control" parent="CanvasLayer" unique_id=826709402 instance=ExtResource("10_kabln")]
 
+[node name="Timer" type="Timer" parent="." unique_id=1300277930]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
 [connection signal="timeout" from="RockSpawner/Timer" to="RockSpawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Camera2D" method="_on_timer_timeout"]
