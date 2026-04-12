@@ -1,16 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbv18ih1nuvmo"]
+[gd_scene format=3 uid="uid://dbv18ih1nuvmo"]
 
 [ext_resource type="Script" uid="uid://dyvrnglkoaqk3" path="res://Scripts/FallingRock.gd" id="1_oo0j7"]
 [ext_resource type="Texture2D" uid="uid://dhbi8si5ms7tm" path="res://Assets/Rock.png" id="2_gga31"]
 
-[node name="FallingRock" type="RigidBody2D"]
+[node name="FallingRock" type="RigidBody2D" unique_id=2143782919]
 collision_layer = 8
 collision_mask = 7
 script = ExtResource("1_oo0j7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=167835934]
 polygon = PackedVector2Array(-19, -8, 16, -8, 20, 0, 20, 4, 16, 8, 9, 8, 2, 2, -8, 7, -12, 7, -14, 5, -14, 1, -13, -1, -13, -3, -17, -3, -19, -6)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=652106160]
 rotation = 3.14159
 texture = ExtResource("2_gga31")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

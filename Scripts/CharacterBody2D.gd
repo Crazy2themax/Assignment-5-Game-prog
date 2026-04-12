@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @onready var animatedSprite = $AnimatedSprite2D
 
+signal health_changed(new_health: int)
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -9,7 +11,8 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_facing_right = true
 var is_dead = false
-
+var playerHealth = 4
+ 
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -50,7 +53,25 @@ func flip():
 		scale.x *= -1
 		is_facing_right = true	
 	
+	
 
+func take_damage():
+	if is_dead:
+		return
+	playerHealth-=1
+	emit_signal("health_changed", playerHealth)
+	if playerHealth <= 0:
+		death()
+	
+	
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		body.death()
+		print("Game Over")
+
+	
 func death():
 	if is_dead:
 		return
@@ -58,8 +79,3 @@ func death():
 	print("player died")
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 		
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		body.death()
-		print("Game Over")

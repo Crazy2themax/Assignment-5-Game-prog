@@ -9,12 +9,19 @@
 [ext_resource type="Texture2D" uid="uid://k7n7td2fclyg" path="res://Assets/Tile_14.png" id="5_qtvwi"]
 [ext_resource type="Script" uid="uid://dcebonp0wroph" path="res://Scenes/FloorSpawner.gd" id="7_qkw54"]
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="10_j6osf"]
+[ext_resource type="Script" uid="uid://blfn474bwth8f" path="res://Scenes/progress_bar.gd" id="10_kabln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6a4y"]
 size = Vector2(32, 1996)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tkyk6"]
 size = Vector2(837, 17)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7btox"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ostg"]
+bg_color = Color(0.8, 0, 0, 1)
 
 [node name="BoulderDash" type="Node2D" unique_id=258458386]
 
@@ -148,6 +155,20 @@ text = "Avoid the falling rocks & survive the longest"
 light_mask = 32
 position = Vector2(-5, -284)
 shape = SubResource("RectangleShape2D_tkyk6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=143758495]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1147914951]
+offset_left = -398.0
+offset_top = -166.0
+offset_right = -312.0
+offset_bottom = -143.0
+theme_override_styles/background = SubResource("StyleBoxFlat_7btox")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3ostg")
+max_value = 4.0
+value = 4.0
+script = ExtResource("10_kabln")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="RockSpawner/Timer" to="RockSpawner" method="_on_timer_timeout"]
 [connection signal="body_entered" from="GameLimit/Area2D" to="MainCharacter" method="_on_area_2d_body_entered"]
