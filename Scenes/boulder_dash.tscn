@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://k7n7td2fclyg" path="res://Assets/Tile_14.png" id="5_qtvwi"]
 [ext_resource type="Script" uid="uid://dcebonp0wroph" path="res://Scenes/FloorSpawner.gd" id="7_qkw54"]
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="10_j6osf"]
-[ext_resource type="Script" uid="uid://blfn474bwth8f" path="res://Scenes/progress_bar.gd" id="10_kabln"]
+[ext_resource type="Script" path="res://Scenes/progress_bar.gd" id="10_kabln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6a4y"]
 size = Vector2(32, 1996)

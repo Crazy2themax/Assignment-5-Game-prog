@@ -5,6 +5,7 @@ extends Node2D
 @onready var hard_tiles_node = $"../../HardTiles"
 @onready var floor_spawner_location = $"../FloorSpawnerYPosition"
 
+var potion_scene = preload("res://Scenes/health_potion.tscn")
 var floor_tile_scene: PackedScene = preload("res://Scenes/hard_tile.tscn")
 var max_tile_quantity = 300;
 const tile_size = 32
@@ -34,7 +35,9 @@ func spawn_row():
 		new_tiles.append(new_tile)
 	for i in range(len(new_tiles)):
 		if randf() > 0.80:
-			# 20% chance of skipping adding the tile
+			if randf() > 0.50:
+				var potion = potion_scene
+				add_child(potion)
 			continue
 		hard_tiles_node.add_child(new_tiles[i])
 	
