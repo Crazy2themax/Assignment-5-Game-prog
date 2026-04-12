@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://butbjbm62ed1a"]
+
+[ext_resource type="Texture2D" uid="uid://cvmc3vhc7k4xw" path="res://Assets/Glowing Potion - RED - Spritesheet.png" id="1_qwjxh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ruv2s"]
+radius = 11.0
+height = 40.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7g2le"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(0, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3x3e4"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(24, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcl32"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(48, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7aak"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(72, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w162u"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(96, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14qo6"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(120, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4xa1"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(144, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhr5c"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(168, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7slx"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(192, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8omlu"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(216, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccdm8"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(240, 0, 24, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vnsp"]
+atlas = ExtResource("1_qwjxh")
+region = Rect2(264, 0, 24, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eah2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7g2le")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3x3e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcl32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7aak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w162u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14qo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4xa1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhr5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7slx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8omlu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccdm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vnsp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=1362229565]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=412018476]
+shape = SubResource("CapsuleShape2D_ruv2s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1675228408]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_eah2x")
+autoplay = "default"
+frame_progress = 0.5758742
