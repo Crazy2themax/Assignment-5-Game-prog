@@ -35,10 +35,12 @@ func spawn_row():
 		new_tiles.append(new_tile)
 	for i in range(len(new_tiles)):
 		if randf() > 0.80:
-			if randf() > 0.50:
-				var potion = potion_scene
-				add_child(potion)
+			if randi() % 20 > 15:
+				var potion = potion_scene.instantiate()
+				potion.global_position = new_tiles[i].global_position
+				hard_tiles_node.add_child(potion)
 			continue
+		
 		hard_tiles_node.add_child(new_tiles[i])
 	
 	spawn_next_location = global_position.y + tile_size

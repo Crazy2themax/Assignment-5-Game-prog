@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dqdx36arpap7e" path="res://Scenes/Camera2D.gd" id="4_n5s3k"]
 [ext_resource type="Texture2D" uid="uid://k7n7td2fclyg" path="res://Assets/Tile_14.png" id="5_qtvwi"]
 [ext_resource type="Script" uid="uid://dcebonp0wroph" path="res://Scenes/FloorSpawner.gd" id="7_qkw54"]
+[ext_resource type="PackedScene" uid="uid://butbjbm62ed1a" path="res://Scenes/health_potion.tscn" id="9_7btox"]
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="10_j6osf"]
 [ext_resource type="Script" path="res://Scenes/progress_bar.gd" id="10_kabln"]
 
@@ -133,6 +134,8 @@ texture = ExtResource("4_iqrwy")
 [node name="Timer" type="Timer" parent="RockSpawner" unique_id=834472782]
 wait_time = 0.8
 autostart = true
+
+[node name="Area2D" parent="RockSpawner" unique_id=1362229565 instance=ExtResource("9_7btox")]
 
 [node name="HardTiles" type="Node2D" parent="." unique_id=895862511]
 

@@ -2,7 +2,7 @@ extends Node2D
 
 var falling_rock_scene: PackedScene = preload("res://Scenes/falling_rock.tscn")
 
-@onready var rocks_node = $"../FallingRocks"
+@onready var rocks_node = $FallingRocks
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
