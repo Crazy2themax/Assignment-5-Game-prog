@@ -23,9 +23,9 @@ script = ExtResource("1_q5gw1")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.12
-anchor_top = 0.1
+anchor_top = 0.9
 anchor_right = 0.88
-anchor_bottom = 0.2
+anchor_bottom = 0.9
 grow_horizontal = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1878755373]

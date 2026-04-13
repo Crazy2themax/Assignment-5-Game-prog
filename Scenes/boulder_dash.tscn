@@ -151,7 +151,6 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1523474370]
-visible = false
 
 [node name="Control" parent="CanvasLayer" unique_id=826709402 instance=ExtResource("10_kabln")]
 
