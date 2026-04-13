@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b6idknklacj8v"]
 
 [ext_resource type="Texture2D" uid="uid://beljn1w1haf1q" path="res://Assets/Tile_02.png" id="1_chi5k"]
-[ext_resource type="Script" uid="uid://c6i5ycoa3irfq" path="res://Scripts/boulder_dash.gd" id="1_kabln"]
 [ext_resource type="Texture2D" uid="uid://c2e8rg04pnrhi" path="res://Assets/Free-Mountain-Backgrounds-Pixel-Art9.png" id="2_fa256"]
 [ext_resource type="PackedScene" uid="uid://qijcjx6cmcoi" path="res://Scenes/main_character.tscn" id="3_x35cg"]
 [ext_resource type="Script" uid="uid://cbyl4bfy1v021" path="res://Scripts/RockSpawner.gd" id="4_6li3k"]
