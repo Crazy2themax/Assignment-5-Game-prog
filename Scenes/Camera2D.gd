@@ -8,9 +8,10 @@ extends Camera2D
 
 var highscore = preload("res://highscore.tscn")
 
+var heightLimit = 179
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$Area2D.global_position =  Vector2(0, -heightLimit) 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

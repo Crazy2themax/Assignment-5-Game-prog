@@ -11,6 +11,9 @@
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="10_j6osf"]
 [ext_resource type="PackedScene" uid="uid://b4o5v7ay0dsh8" path="res://highscore.tscn" id="10_kabln"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kabln"]
+size = Vector2(824, 17)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6a4y"]
 size = Vector2(32, 1996)
 
@@ -42,6 +45,12 @@ position = Vector2(400, -4)
 
 [node name="FloorSpawnerYPosition" type="Node2D" parent="Camera2D" unique_id=1167449091]
 position = Vector2(-1, 321)
+
+[node name="Area2D" type="Area2D" parent="Camera2D" unique_id=368977995]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D" unique_id=419000047]
+position = Vector2(0, -90)
+shape = SubResource("RectangleShape2D_kabln")
 
 [node name="Walls" type="Node2D" parent="." unique_id=143775747]
 position = Vector2(-572, -305)
@@ -149,5 +158,6 @@ wait_time = 4.0
 one_shot = true
 autostart = true
 
+[connection signal="body_entered" from="Camera2D/Area2D" to="MainCharacter" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="RockSpawner/Timer" to="RockSpawner" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Camera2D" method="_on_timer_timeout"]
