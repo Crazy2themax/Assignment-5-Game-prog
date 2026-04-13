@@ -130,12 +130,14 @@ autostart = true
 [node name="InstructionsLabel" type="Label" parent="." unique_id=393494569]
 offset_left = -364.0
 offset_top = -197.0
-offset_right = 1846.0
+offset_right = 344.0
 offset_bottom = -100.0
 theme = ExtResource("10_j6osf")
 theme_override_colors/font_color = Color(0.811765, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 23
 text = "Avoid the falling rocks & survive the longest"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [connection signal="timeout" from="RockSpawner/Timer" to="RockSpawner" method="_on_timer_timeout"]
