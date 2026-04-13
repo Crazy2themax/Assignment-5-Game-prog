@@ -6,7 +6,11 @@ var game_scene = preload("res://Scenes/boulder_dash.tscn")
 var lang = ""
 
 func _on_start_game_button_pressed():
-	get_tree().change_scene_to_packed(game_scene)
+	SceneManager.change_scene(game_scene, {
+		"pattern" : "res://addons/scene_manager/shader_patterns/curtains.png",
+		"speed": 5,
+		"color" : Color.BLACK
+		})
 
 
 func _on_exit_game_button_pressed():
