@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b4o5v7ay0dsh8"]
 
 [ext_resource type="Theme" uid="uid://c45j4wuvtj182" path="res://Fonts/Label_theme.tres" id="1_mvahi"]
-[ext_resource type="Script" uid="uid://dbktdeyasqfso" path="res://highscore.gd" id="1_q5gw1"]
+[ext_resource type="Script" path="res://highscore.gd" id="1_q5gw1"]
 [ext_resource type="Script" path="res://Scenes/progress_bar.gd" id="2_0jogh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5gw1"]
@@ -38,7 +38,7 @@ theme = ExtResource("1_mvahi")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 20
-text = "Current Depth:"
+text = "DEEPEST DEPTH:"
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1774649206]
 layout_mode = 2
