@@ -6,8 +6,7 @@ extends RigidBody2D
 func _ready():
 	if randf() > 0.5:
 		sprite.flip_h = true
-	await get_tree().create_timer(particles.lifetime + 0.3).timeout
-	queue_free()
+	
 
 
 func _explode():

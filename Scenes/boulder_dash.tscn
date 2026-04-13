@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://dcebonp0wroph" path="res://Scenes/FloorSpawner.gd" id="7_qkw54"]
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="10_j6osf"]
 [ext_resource type="PackedScene" uid="uid://b4o5v7ay0dsh8" path="res://highscore.tscn" id="10_kabln"]
+[ext_resource type="AudioStream" uid="uid://bbmk7go21sst2" path="res://Assets/Audio/mixkit-negative-guitar-tone-2324.wav" id="11_7btox"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kabln"]
 size = Vector2(824, 17)
@@ -153,6 +154,15 @@ autowrap_mode = 3
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1523474370]
 
 [node name="Control" parent="CanvasLayer" unique_id=826709402 instance=ExtResource("10_kabln")]
+
+[node name="Timer" type="Timer" parent="." unique_id=1300277930]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=43518406]
+stream = ExtResource("11_7btox")
+volume_db = 1.963
 
 [connection signal="body_entered" from="Camera2D/Area2D" to="MainCharacter" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="RockSpawner/Timer" to="RockSpawner" method="_on_timer_timeout"]
