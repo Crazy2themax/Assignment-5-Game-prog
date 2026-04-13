@@ -22,3 +22,8 @@ func update_depth(new_depth: int):
 func update_health(new_health: int):
 	health = new_health
 	emit_signal("health_changed", health)
+
+func reset_run():
+	health = 4
+	depth = 0
+	emit_signal("depth_changed", depth)

@@ -1,5 +1,7 @@
 extends Control
 
+@onready var label = $MarginContainer/HBoxContainer/Label2
+
 func _ready() -> void:
 	Global.depth_changed.connect(_on_depth_changed)
 
@@ -7,4 +9,4 @@ func _ready() -> void:
 	_on_depth_changed(Global.depth)
 
 func _on_depth_changed(value: int) -> void:
-	$MarginContainer/HBoxContainer/Label2.text = str(value)
+	label.text = str(value) + " m"

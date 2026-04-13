@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c88an4hcfosvf"]
+[gd_scene format=3 uid="uid://gl5r0wespjxt"]
 
 [ext_resource type="Script" uid="uid://djajjf0vui351" path="res://Scripts/game_over.gd" id="1_eoghk"]
 [ext_resource type="Texture2D" uid="uid://c2e8rg04pnrhi" path="res://Assets/Free-Mountain-Backgrounds-Pixel-Art9.png" id="2_14u15"]
@@ -70,7 +70,6 @@ vertical_alignment = 1
 
 [node name="CurrentScoreDepthLabel" type="Label" parent="CanvasLayer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=470242271]
 layout_mode = 2
-text = "0M"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/VBoxContainer" unique_id=899299042]
 layout_mode = 2
@@ -84,7 +83,6 @@ vertical_alignment = 1
 
 [node name="HighScoreDepthLabel" type="Label" parent="CanvasLayer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=845483784]
 layout_mode = 2
-text = "0M"
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
