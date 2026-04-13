@@ -54,15 +54,22 @@ text = "START GAME"
 layout_mode = 2
 text = "EXIT GAME"
 
-[node name="HighScoreLabel" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=2000364100]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=1277404141]
 layout_mode = 2
+
+[node name="HighScoreLabel" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=2000364100]
+layout_mode = 2
+size_flags_horizontal = 3
 theme = SubResource("Theme_vcwsy")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
-text = "YOUR HIGHSCORE: 0M"
+text = "YOUR HIGHSCORE:"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1102601394]
+layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=388200089]
 anchors_preset = 2
@@ -87,3 +94,5 @@ text = "FRENCH"
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/ExitGameButton" to="." method="_on_exit_game_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/EnButton" to="." method="_on_en_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/FrButton" to="." method="_on_fr_button_pressed"]

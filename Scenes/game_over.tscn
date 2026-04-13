@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://c7ohijy7bux8j"]
+[gd_scene format=3 uid="uid://c88an4hcfosvf"]
 
-[ext_resource type="Script" path="res://game_over.gd" id="1_eoghk"]
+[ext_resource type="Script" uid="uid://djajjf0vui351" path="res://Scripts/game_over.gd" id="1_eoghk"]
 [ext_resource type="Texture2D" uid="uid://c2e8rg04pnrhi" path="res://Assets/Free-Mountain-Backgrounds-Pixel-Art9.png" id="2_14u15"]
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="3_j3ryr"]
 [ext_resource type="FontFile" uid="uid://gytgk1mjopxc" path="res://Fonts/rubber-biscuit.bold.ttf" id="4_rjluv"]
