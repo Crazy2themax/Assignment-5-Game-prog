@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var animatedSprite = $AnimatedSprite2D
 @onready var spawner = $"../Camera2D/FloorSpawner"
 @onready var player = $"."
-
+@onready var dammage = $"../AudioStreamPlayer"
 signal health_changed(new_health: int)
 
 const SPEED = 300.0
@@ -60,12 +60,15 @@ func flip():
 	
 
 func take_damage():
+	
 	if is_dead:
 		return
 	Global.health -=1
 	emit_signal("health_changed", Global.health)
+	dammage.play()
 	if Global.health <= 0:
 		death()
+		
 	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
