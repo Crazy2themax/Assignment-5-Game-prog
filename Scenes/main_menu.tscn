@@ -2,13 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c5jj5lkinaokl" path="res://Scripts/main_menu.gd" id="1_nxnsl"]
 [ext_resource type="Texture2D" uid="uid://c2e8rg04pnrhi" path="res://Assets/Free-Mountain-Backgrounds-Pixel-Art9.png" id="1_oj02b"]
-[ext_resource type="FontFile" uid="uid://gytgk1mjopxc" path="res://Fonts/rubber-biscuit.bold.ttf" id="2_2yiwn"]
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="3_xls81"]
 [ext_resource type="Theme" uid="uid://c45j4wuvtj182" path="res://Fonts/Label_theme.tres" id="4_n45e2"]
-
-[sub_resource type="Theme" id="Theme_vcwsy"]
-default_font = ExtResource("2_2yiwn")
-default_font_size = 22
 
 [node name="MainMenu" type="Node2D" unique_id=1502638335]
 script = ExtResource("1_nxnsl")
@@ -63,11 +58,12 @@ text = "EXIT GAME"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=1277404141]
 layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_n45e2")
 
 [node name="HighScoreLabel" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=2000364100]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = SubResource("Theme_vcwsy")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
@@ -77,6 +73,7 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1102601394]
 layout_mode = 2
+text = "0 M"
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=388200089]
 anchors_preset = 2

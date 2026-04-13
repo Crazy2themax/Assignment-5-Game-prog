@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d67n65qputeh"]
 
-[ext_resource type="Texture2D" path="res://Assets/Glowing Potion - RED - Spritesheet.png" id="1_qwjxh"]
+[ext_resource type="Texture2D" uid="uid://cvmc3vhc7k4xw" path="res://Assets/Glowing Potion - RED - Spritesheet.png" id="1_qwjxh"]
 [ext_resource type="Script" path="res://Scenes/health_potion.gd" id="1_x2qfu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ruv2s"]

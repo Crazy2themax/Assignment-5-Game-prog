@@ -8,3 +8,6 @@ default_font_size = 22
 Label/colors/font_shadow_color = Color(0, 0, 0, 1)
 Label/constants/shadow_offset_x = 2
 Label/constants/shadow_offset_y = 2
+ProgressBar/constants/outline_size = 5
+ProgressBar/font_sizes/font_size = 20
+ProgressBar/fonts/font = ExtResource("1_t1iw2")

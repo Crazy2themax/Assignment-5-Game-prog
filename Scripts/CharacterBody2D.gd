@@ -1,19 +1,20 @@
 extends CharacterBody2D
 
 @onready var animatedSprite = $AnimatedSprite2D
+@onready var spawner = $"../Camera2D/FloorSpawner"
+@onready var player = $"."
 
 signal health_changed(new_health: int)
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+const TILE_SIZE = 32
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_facing_right = true
 var is_dead = false
-var playerHealth = 4
  
-
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -36,6 +37,9 @@ func _physics_process(delta):
 func _process(delta):
 	animate()
 	flip()
+	var depth = current_depth()
+	Global.update_depth(depth)
+	
 	
 func animate():
 	if not is_on_floor():
@@ -58,13 +62,11 @@ func flip():
 func take_damage():
 	if is_dead:
 		return
-	playerHealth-=1
-	emit_signal("health_changed", playerHealth)
-	if playerHealth <= 0:
+	Global.health -=1
+	emit_signal("health_changed", Global.health)
+	if Global.health <= 0:
 		death()
 	
-	
-
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -78,4 +80,7 @@ func death():
 	is_dead = true 
 	print("player died")
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
-		
+	
+
+func current_depth():
+	return int(($Feet.global_position.y - spawner.start_y) / TILE_SIZE) +1
