@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b4o5v7ay0dsh8"]
 
 [ext_resource type="Theme" uid="uid://c45j4wuvtj182" path="res://Fonts/Label_theme.tres" id="1_mvahi"]
+[ext_resource type="Script" uid="uid://dbktdeyasqfso" path="res://highscore.gd" id="1_q5gw1"]
 [ext_resource type="Script" path="res://Scenes/progress_bar.gd" id="2_0jogh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5gw1"]
@@ -16,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_q5gw1")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=713955560]
 layout_mode = 1
@@ -28,6 +30,7 @@ grow_horizontal = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1878755373]
 layout_mode = 2
+theme = ExtResource("1_mvahi")
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1250338393]
 layout_mode = 2
@@ -35,11 +38,10 @@ theme = ExtResource("1_mvahi")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 20
-text = "Current Depth"
+text = "Current Depth:"
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1774649206]
 layout_mode = 2
-text = "0 M"
 
 [node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer" unique_id=1551370251]
 custom_minimum_size = Vector2(200, 0)

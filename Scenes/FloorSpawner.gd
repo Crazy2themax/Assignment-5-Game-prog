@@ -8,12 +8,16 @@ extends Node2D
 var potion_scene = preload("res://Scenes/health_potion.tscn")
 var floor_tile_scene: PackedScene = preload("res://Scenes/hard_tile.tscn")
 var max_tile_quantity = 300;
+var depth = Global.depth
+var start_y = 0
+
 const tile_size = 32
 
 var spawn_next_location: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	start_y = global_position.y
 	spawn_row()
 	spawn_row()
 	spawn_row()
@@ -42,7 +46,8 @@ func spawn_row():
 			continue
 		
 		hard_tiles_node.add_child(new_tiles[i])
-	
+
+	depth +=1
 	spawn_next_location = global_position.y + tile_size
 	
 		

@@ -207,3 +207,6 @@ frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=528761503]
 shape = SubResource("CapsuleShape2D_dd02u")
+
+[node name="Feet" type="Marker2D" parent="." unique_id=88651633]
+position = Vector2(0, 32)
