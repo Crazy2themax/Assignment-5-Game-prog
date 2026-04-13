@@ -11,9 +11,7 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_facing_right = true
 var is_dead = false
-var playerHealth = 4
  
-
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -58,13 +56,11 @@ func flip():
 func take_damage():
 	if is_dead:
 		return
-	playerHealth-=1
+	Global.health -=1
 	emit_signal("health_changed", playerHealth)
-	if playerHealth <= 0:
+	if Global.health <= 0:
 		death()
 	
-	
-
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
