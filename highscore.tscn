@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4o5v7ay0dsh8"]
 
-[ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="1_mvahi"]
+[ext_resource type="Theme" uid="uid://c45j4wuvtj182" path="res://Fonts/Label_theme.tres" id="1_mvahi"]
 
 [node name="Control" type="Control" unique_id=826709402]
 layout_mode = 3

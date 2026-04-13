@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://c45j4wuvtj182"]
+
+[ext_resource type="FontFile" uid="uid://gytgk1mjopxc" path="res://Fonts/rubber-biscuit.bold.ttf" id="1_t1iw2"]
+
+[resource]
+default_font = ExtResource("1_t1iw2")
+default_font_size = 22
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2

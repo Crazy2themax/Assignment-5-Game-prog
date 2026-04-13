@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c2e8rg04pnrhi" path="res://Assets/Free-Mountain-Backgrounds-Pixel-Art9.png" id="1_oj02b"]
 [ext_resource type="FontFile" uid="uid://gytgk1mjopxc" path="res://Fonts/rubber-biscuit.bold.ttf" id="2_2yiwn"]
 [ext_resource type="Theme" uid="uid://d213qxnwhb3cj" path="res://Fonts/title_theme.tres" id="3_xls81"]
+[ext_resource type="Theme" uid="uid://c45j4wuvtj182" path="res://Fonts/Label_theme.tres" id="4_n45e2"]
 
 [sub_resource type="Theme" id="Theme_vcwsy"]
 default_font = ExtResource("2_2yiwn")
@@ -51,14 +52,13 @@ text = "BOULDER DASH"
 
 [node name="StartGameButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=348176321]
 layout_mode = 2
-theme = ExtResource("3_xls81")
-theme_override_font_sizes/font_size = 16
+theme = ExtResource("4_n45e2")
+theme_override_font_sizes/font_size = 20
 text = "START GAME"
 
 [node name="ExitGameButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=587691143]
 layout_mode = 2
-theme = ExtResource("3_xls81")
-theme_override_font_sizes/font_size = 16
+theme = ExtResource("4_n45e2")
 text = "EXIT GAME"
 
 [node name="HighScoreLabel" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=2000364100]
