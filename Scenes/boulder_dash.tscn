@@ -145,7 +145,7 @@ visible = false
 [node name="Control" parent="CanvasLayer" unique_id=826709402 instance=ExtResource("10_kabln")]
 
 [node name="Timer" type="Timer" parent="." unique_id=1300277930]
-wait_time = 5.0
+wait_time = 4.0
 one_shot = true
 autostart = true
 

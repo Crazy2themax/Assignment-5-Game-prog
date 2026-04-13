@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://b4o5v7ay0dsh8"]
 
 [ext_resource type="Theme" uid="uid://c45j4wuvtj182" path="res://Fonts/Label_theme.tres" id="1_mvahi"]
+[ext_resource type="Script" path="res://Scenes/progress_bar.gd" id="2_0jogh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5gw1"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3l0qk"]
+bg_color = Color(0.8, 0, 0, 1)
 
 [node name="Control" type="Control" unique_id=826709402]
 layout_mode = 3
@@ -13,16 +20,35 @@ grow_vertical = 2
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=713955560]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.05
-anchor_right = 0.5
-anchor_bottom = 0.1
-offset_left = 120.0
+anchor_left = 0.12
+anchor_top = 0.1
+anchor_right = 0.88
+anchor_bottom = 0.2
 grow_horizontal = 0
 
-[node name="Label" type="Label" parent="MarginContainer" unique_id=1250338393]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1878755373]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1250338393]
 layout_mode = 2
 theme = ExtResource("1_mvahi")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 20
 text = "Current Depth"
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1774649206]
+layout_mode = 2
+text = "0 M"
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer" unique_id=1551370251]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_q5gw1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3l0qk")
+max_value = 4.0
+value = 4.0
+script = ExtResource("2_0jogh")
+metadata/_edit_use_anchors_ = true
