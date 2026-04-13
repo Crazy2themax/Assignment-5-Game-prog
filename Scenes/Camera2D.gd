@@ -6,9 +6,11 @@ extends Camera2D
 @onready var rock_spawner = $"../RockSpawner"
 @onready var rock_spawner_y_position = $SpawnerYPosition
 
+var highscore = preload("res://highscore.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,3 +22,7 @@ func move_rock_spawner():
 	rock_spawner.position.x = character.position.x
 	rock_spawner.position.y = rock_spawner_y_position.global_position.y
 	
+
+
+func _on_timer_timeout() -> void:
+	$"../CanvasLayer".visible = true
