@@ -17,3 +17,8 @@ func update_depth(new_depth: int):
 		if depth > highscore:
 			highscore = depth
 			emit_signal("highscore_changed", highscore)
+
+func reset_run():
+	health = 4
+	depth = 0
+	emit_signal("depth_changed", depth)
