@@ -10,8 +10,7 @@ func _ready() -> void:
 	value = 4
 	target_value =4 
 	var player = get_tree().get_first_node_in_group("player")
-	if player:
-		player.health_changed.connect(_on_health_changed)
+	
 
 func _on_health_changed(newHealth: int):
 	target_value = float(newHealth)

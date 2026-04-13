@@ -3,9 +3,14 @@
 [ext_resource type="Script" uid="uid://dyvrnglkoaqk3" path="res://Scripts/FallingRock.gd" id="1_oo0j7"]
 [ext_resource type="Texture2D" uid="uid://dhbi8si5ms7tm" path="res://Assets/Rock.png" id="2_gga31"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cyyhn"]
+radius = 8.0
+height = 38.0
+
 [node name="FallingRock" type="RigidBody2D" unique_id=2143782919]
 collision_layer = 8
-collision_mask = 7
+collision_mask = 5
+max_contacts_reported = 1
 script = ExtResource("1_oo0j7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=167835934]
@@ -15,4 +20,28 @@ polygon = PackedVector2Array(-19, -8, 16, -8, 20, 0, 20, 4, 16, 8, 9, 8, 2, 2, -
 rotation = 3.14159
 texture = ExtResource("2_gga31")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=607250498]
+emitting = false
+amount = 9
+texture = ExtResource("2_gga31")
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 8
+direction = Vector2(0, -1)
+spread = 180.0
+gravity = Vector2(0, 600)
+initial_velocity_min = 80.0
+initial_velocity_max = 220.0
+scale_amount_min = 0.2
+scale_amount_max = 0.5
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1215988353]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=274825758]
+position = Vector2(1, -1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_cyyhn")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

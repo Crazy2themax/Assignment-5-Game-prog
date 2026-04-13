@@ -47,8 +47,9 @@ position = Vector2(400, -4)
 position = Vector2(-1, 321)
 
 [node name="Area2D" type="Area2D" parent="Camera2D" unique_id=368977995]
+collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D" unique_id=419000047]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D" unique_id=419000047 groups=["player"]]
 position = Vector2(0, -90)
 shape = SubResource("RectangleShape2D_kabln")
 
@@ -125,6 +126,7 @@ position = Vector2(0, -326)
 script = ExtResource("4_6li3k")
 
 [node name="Sprite2D" type="Sprite2D" parent="RockSpawner" unique_id=946717080]
+position = Vector2(2, 2)
 texture = ExtResource("4_iqrwy")
 
 [node name="Timer" type="Timer" parent="RockSpawner" unique_id=1373705499]
