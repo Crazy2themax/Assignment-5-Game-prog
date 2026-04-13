@@ -6,6 +6,8 @@ extends CharacterBody2D
 
 signal health_changed(new_health: int)
 
+var highscore = Global.highscore
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const TILE_SIZE = 32
@@ -79,6 +81,7 @@ func death():
 	is_dead = true 
 	print("player died")
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+	SettingsManager.set_highscore(highscore)
 	
 
 func current_depth():
