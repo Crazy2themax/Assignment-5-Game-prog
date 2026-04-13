@@ -1,6 +1,8 @@
 extends ProgressBar
-@export var animationSpeed := 5.0
+@export var animationSpeed := 0.1
 var target_value: float = 4.0
+
+var tween: Tween = null
 
 
  
@@ -8,14 +10,13 @@ var target_value: float = 4.0
 func _ready() -> void:
 	max_value = 4
 	value = 4
-	target_value =4 
+	target_value = 4 
+	Global.health_changed.connect(_on_health_changed)
 	var player = get_tree().get_first_node_in_group("player")
-	
 
 func _on_health_changed(newHealth: int):
-	target_value = float(newHealth)
+	if tween:
+		tween.kill()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	value = lerp(value, target_value, delta* animationSpeed)
+	tween = create_tween()
+	tween.tween_property(self, "value", float(newHealth), animationSpeed)

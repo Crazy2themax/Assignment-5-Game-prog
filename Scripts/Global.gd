@@ -6,6 +6,7 @@ var health = 4
 
 signal depth_changed(new_depth)
 signal highscore_changed(new_highscore)
+signal health_changed(new_health)
 
 func update_depth(new_depth: int):
 	# Only update if the player reached a new maximum depth this run
@@ -17,3 +18,7 @@ func update_depth(new_depth: int):
 		if depth > highscore:
 			highscore = depth
 			emit_signal("highscore_changed", highscore)
+
+func update_health(new_health: int):
+	health = new_health
+	emit_signal("health_changed", health)

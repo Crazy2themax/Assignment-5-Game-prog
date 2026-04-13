@@ -62,8 +62,7 @@ func flip():
 func take_damage():
 	if is_dead:
 		return
-	Global.health -=1
-	emit_signal("health_changed", Global.health)
+	Global.update_health(Global.health - 1)
 	if Global.health <= 0:
 		death()
 	
