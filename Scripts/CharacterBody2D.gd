@@ -63,7 +63,7 @@ func take_damage():
 	if is_invincible or is_dead:
 		return
 	Global.health -= 1
-	emit_signal("health_changed", Global.health)
+	Global.update_health(Global.health)
 	dammage.play()
 	if Global.health <= 0:
 		death()

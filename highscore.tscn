@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://c45j4wuvtj182" path="res://Fonts/Label_theme.tres" id="1_mvahi"]
 [ext_resource type="Script" uid="uid://dbktdeyasqfso" path="res://highscore.gd" id="1_q5gw1"]
-[ext_resource type="Script" uid="uid://blfn474bwth8f" path="res://Scenes/progress_bar.gd" id="2_0jogh"]
+[ext_resource type="Script" uid="uid://blfn474bwth8f" path="res://Scripts/progress_bar.gd" id="2_0jogh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5gw1"]
 bg_color = Color(0.2, 0.2, 0.2, 1)

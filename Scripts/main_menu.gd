@@ -10,24 +10,20 @@ func _on_start_game_button_pressed():
 		"pattern" : "res://addons/scene_manager/shader_patterns/curtains.png",
 		"speed": 5,
 		"color" : Color.BLACK
-		})
-
+	})
 
 func _on_exit_game_button_pressed():
 	get_tree().quit()
 
-
 func _on_en_button_pressed() -> void:
+	SettingsManager.set_setting("graphics", "language", "en")
+	Global.lang = "en"
 	TranslationServer.set_locale("en")
-	lang = "en"
-	Global.save()
 
 func _on_fr_button_pressed() -> void:
+	SettingsManager.set_setting("graphics", "language", "fr")
+	Global.lang = "fr"
 	TranslationServer.set_locale("fr")
-	lang = "fr"
-	SettingsManager.set_setting("graphics", "language", lang)
-	Global.lang = lang
-
 
 func _ready():
 	Global.load_settings()
@@ -35,11 +31,11 @@ func _ready():
 	# Load saved language
 	lang = SettingsManager.get_setting("graphics", "language")
 	if lang == "" or lang == null:
-		lang = "en"  # default fallback
+		lang = "en"
 
 	TranslationServer.set_locale(lang)
 	Global.lang = lang
 
-	# Load highscore
-	SettingsManager.set_highscore(Global.highscore)
+	# Load highscore (do NOT save here)
+	Global.highscore = SettingsManager.get_highscore()
 	label.text = str(Global.highscore)
