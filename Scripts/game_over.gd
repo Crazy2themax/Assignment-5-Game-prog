@@ -24,9 +24,8 @@ func _on_play_again_button_pressed() -> void:
 	Global.reset_run()
 	get_tree().change_scene_to_packed(game_scene)
 
-
-
 func _on_main_menu_button_pressed() -> void:
+	Global.reset_run()
 	get_tree().change_scene_to_packed(menu_scene)
 
 func _on_depth_changed(value: int) -> void:
