@@ -23,11 +23,20 @@ func _process(delta: float) -> void:
 func _on_play_again_button_pressed() -> void:
 	Global.reset_run()
 	get_tree().change_scene_to_packed(game_scene)
+	SceneManager.change_scene(game_scene, {
+		"pattern" : "res://addons/scene_manager/shader_patterns/curtains.png",
+		"speed": 5,
+		"color" : Color.BLACK
+	})
 
 func _on_main_menu_button_pressed() -> void:
 	Global.reset_run()
 	get_tree().change_scene_to_packed(menu_scene)
-
+	SceneManager.change_scene(menu_scene, {
+		"pattern" : "res://addons/scene_manager/shader_patterns/curtains.png",
+		"speed": 5,
+		"color" : Color.BLACK
+	})
 func _on_depth_changed(value: int) -> void:
 	current_depth.text = str(value) + " m"
 

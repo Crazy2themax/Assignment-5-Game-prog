@@ -102,7 +102,11 @@ func death():
 	modulate = Color.WHITE
 	animatedSprite.play("death")
 	await get_tree().create_timer(2.0).timeout
-	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+	SceneManager.change_scene("res://Scenes/game_over.tscn", {
+		"pattern" :"res://addons/scene_manager/shader_patterns/vertical.png" ,
+		"speed": 6,
+		"color" : Color.DARK_RED
+	})
 
 func current_depth():
 	return int(($Feet.global_position.y - spawner.start_y) / TILE_SIZE) +1

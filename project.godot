@@ -19,9 +19,14 @@ run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://ch5ne667p7k34"
+
 [autoload]
 
 Global="*uid://bgjvb5hvsitv8"
+SceneManager="*uid://j20v4cg7v8m1"
 
 [internationalization]
 
