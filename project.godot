@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://bgjvb5hvsitv8"
+SettingsManager="*uid://dqaueskqev37c"
 
 [internationalization]
 

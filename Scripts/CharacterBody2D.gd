@@ -4,6 +4,9 @@ extends CharacterBody2D
 @onready var player = $"."
 @onready var dammage = $"../AudioStreamPlayer"
 signal health_changed(new_health: int)
+
+var highscore = Global.highscore
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const TILE_SIZE = 32
@@ -103,6 +106,8 @@ func death():
 	animatedSprite.play("death")
 	await get_tree().create_timer(2.0).timeout
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+	SettingsManager.set_highscore(highscore)
+	
 
 func current_depth():
 	return int(($Feet.global_position.y - spawner.start_y) / TILE_SIZE) +1
